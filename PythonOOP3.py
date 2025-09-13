@@ -1,52 +1,31 @@
-# When to use OBJECTS and Classes ? 
-# Whenever There are Objects in Context, Such as Phone, book, Cup
-# Attributes(Variables) are Properties/Parameters of Objects -> For a Phone => Model_Number = 12091314, Turned_On = True, Price = 50krs.
-# Methods(Functions) are Functions That belong to and Object/class, Methods = Functions  -> For a Phone, Def Make_call():
-#  Def Recive_call(): Def Turn_on                 
-#
-#                    For a cup => Attributes: Is_empty, Temprature, Liquid
-#                                   Methodes: def Empty_cup, Def Fill_cup, Def Throw_cup_in_Trash_can
-#
-# Constructor is a special Type of Method. 
-
-class car:
-    def __init__(self, Model_Number, Color, Price, Brand, Sports):      # <----- CONSTRUCTOR 
-        self.Model_Number = Model_Number
-        self.Color = Color
-        self.Price = Price 
-        self.Brand = Brand
-        self.Sports = Sports
-
-    def Drive(self):
-        print("You Drive the car")
-
-
-car1 = car(123456, "Blue", 4000000, "Porche", True)
-car2 = car(987654, "Yellow", 300000, "Mustang", True)
-car3 = car(798998, "Red", 700000, "Corvette", False  )
+# Duck Typing = is an another way of achieving polymorphism besides using inheritance 
+#                 objects must have the minimum nessesary attributes/Methods.
+#                 "If it looks like a duck, qauks like a duck it must be a duck"
+# Basically meaning we will Name the Methodes and attributes or Variables of One class to match another class's Methods or Variables 
+# Because They are similar, in attributes or in some way. RIGHT ? 
 
 
 
-# print(car3.Model_Number)
-# print(car3.Brand)
-# print(car3.Price)
-# print(car3.Color)
-# print("----------------------\n")
+# INSTANT METHODS and STATIC METHODS DIFFERENCE ===> Clear ? 
 
-# print(car2.Model_Number)
-# print(car2.Brand)
-# print(car2.Price)
-# print(car2.Color)
-# print("----------------------\n")
+# @something ---> this is called a decorator  Ex: @staticmethod ---> this is a decorator used when creating a static method
 
-# print(car1.Model_Number)
-# print(car1.Brand)
-# print(car1.Price)
-# print(car1.Color)
+class Employee: 
+    def __init__(self, Name, Position):
+        self.Name = Name
+        self.Position = Position
 
+    def get_info(self):
+        return f"{self.Name} is Employee with position {self.Position}"
+    
+    @staticmethod
+    def is_a_Valid_poisiton(position):
+        Positions = ["Manager", "Cook", "Helper", "Fresher"]
+        return position in Positions 
 
-# print(car1.Drive)    ---> WRONG (you dont access the Methods like this)
+Employee1 = Employee("YASH", "Manager")
 
-# car1.Drive    ---> # WRONG (Without parenthesis you are only accessing it and not calling it)
+# print(Employee1.Name)
+print(f"{Employee1.Name} is at Employee Position = {Employee1.Position}, which is a Valid Position = {Employee.is_a_Valid_poisiton(Employee1.Position)}")
+# print(Employee.is_a_Valid_poisiton("Astronaut"))
 
-car1.Drive()
