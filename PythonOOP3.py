@@ -18,10 +18,7 @@ class car:
         self.Sports = Sports
 
     def Drive(self):
-        print(f"You Drive the car {self.Color} {self.Brand}")
-
-    def Crash(self):
-        print(f"You crashed your {self.Brand} That was worth ${self.Price} AND the model number was {self.Model_Number}")
+        print("You Drive the car")
 
 
 car1 = car(123456, "Blue", 4000000, "Porche", True)
@@ -52,5 +49,4 @@ car3 = car(798998, "Red", 700000, "Corvette", False  )
 
 # car1.Drive    ---> # WRONG (Without parenthesis you are only accessing it and not calling it)
 
-# car1.Drive()
-car2.Crash()
+car1.Drive()
