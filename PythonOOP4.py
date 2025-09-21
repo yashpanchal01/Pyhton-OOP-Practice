@@ -1,4 +1,4 @@
-# Magic Methods = Created using dunder Used to Compare Objects (=, <, >)
+# Magic Methods = Created using dunder Used to Compare Objects or perform arthmetic operations (=, <, >)
 
 
 
@@ -21,3 +21,16 @@ book2 = book("Atomic Power", "Mans unclear", 300)
 book3 = book("Atomic Orbits", "Maj Yeclear", 250)
 
 print(book1 > book2 and book1 > book3)
+
+
+# you can only have two 
+# Boolean operator is 'and' Not 'AND' 
+
+# Comparisons: __lt__ (<), __gt__ (>), __eq__ (==), __le__ (<=), __ge__ (>=)
+# Arithmetic: __add__ (+), __sub__ (-), __mul__ (*), __truediv__ (/)
+
+
+# The General Rule: 
+# A method always takes self as its first argument, followed by whatever other information it needs to do its job.
+# This can be zero, one, or multiple additional arguments of any type (integers, strings, lists, or other objects).
+
