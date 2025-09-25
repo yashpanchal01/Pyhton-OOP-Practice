@@ -17,19 +17,23 @@ print("\n".join(list_second_lowers))
 
 '''
 
-# string = 'AABCAADDD'
-# k = 3
+x = 'AABCAADDD'
+k = 3
 
 def merge_the_tools(string, k):
-    list1 = []
-    list1.append(string for i in range(k+1))
-    list2 = list(set(list1))
-    x = "".join(list2)
+    for i in range(0, len(string), k):  # For first iteration i = 0, second i = 3, then 6    as k = 3 Runs till len(string) iterations
+        substring = string[i : i+k] 
+        print(i)
+        print(substring)
 
-    print(x, end="\n")
+        unique_chars = "".join(dict.fromkeys(substring))
+        
+        # 3. Print the result for that chunk
+        print(unique_chars)
 
-print(f"{merge_the_tools('AABCAADDD', 3)}")
 
+merge_the_tools(x, k)
+    
 # def print_something():
 #     print("Hellow world!")
 
