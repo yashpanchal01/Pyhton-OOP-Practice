@@ -6,6 +6,11 @@ for i in range(Total_CMD):
     CMD, Num = input().split(" ") 
     print(f"CMD: {CMD} Num: {Num}")"""
 
-
+"""
 for i in range(4): 
-    print("Hellow" + " " + "BYE", end= "        ")
+    print("Hellow" + " " + "BYE", end= "        ")"""
+
+
+a = 0 
+
+print(type(a))
